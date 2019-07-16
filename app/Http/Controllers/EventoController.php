@@ -15,8 +15,8 @@ class EventoController extends Controller
             ]);
         }
         else{
-            return response(['code'=> 400 , 'mensagem' => 'Evento não encontrado']);
+            return response(['code'=> 400 , 'mensagem' => 'Erro ao coletar evento']);
         }
-        return response()->json(Evento::all());
+        return response(['code'=> 200 , 'mensagem' => 'Evento coletado pela api Coletora']);
     }
 }
